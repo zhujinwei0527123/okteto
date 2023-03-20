@@ -18,6 +18,7 @@ rm -rf /usr/share/nginx/*
 wget https://gitlab.com/Misaka-blog/xray-paas/-/raw/main/mikutap.zip -O /usr/share/nginx/mikutap.zip
 unzip -o "/usr/share/nginx/mikutap.zip" -d /usr/share/nginx/html
 rm -f /usr/share/nginx/mikutap.zip
+cat /etc/nginx/nginx.conf
 
 # 伪装 xray 执行文件
 RELEASE_RANDOMNESS=$(tr -dc 'A-Za-z0-9' </dev/urandom | head -c 6)
